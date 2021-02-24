@@ -24,18 +24,19 @@ export default {
 <style scoped lang="scss">
 .top {
   text-align: center;
-  padding-top: 4em;
+  padding-top: 8em;
 }
 
 @keyframes text-in {
   0% {
-    transform: translate(0, -20px);
+    transform: translate(0);
     opacity: 0;
   }
 }
 .item {
   font-size: 4em;
-  color: #141c3a;
+  // color: #141c3a;
+  color: #fff;
   display: inline-block;
   min-width: 0.3em;
   animation: text-in 0.8s backwards;

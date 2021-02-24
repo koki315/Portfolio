@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="header-container">
     <img src="@/assets/logo_200x200.png" alt="" />
 
     <ul>
@@ -29,12 +29,12 @@ export default {
           to: { name: "Profile" },
         },
         {
-          title: "Portfolio",
-          to: { name: "Portfolio" },
-        },
-        {
           title: "Skills",
           to: { name: "Skills" },
+        },
+        {
+          title: "Portfolio",
+          to: { name: "Portfolio" },
         },
         {
           title: "History",
@@ -54,7 +54,7 @@ export default {
 img {
   width: 3.75em;
 }
-.container{
+.header-container{
   display: flex;
   padding-bottom: 5em;
   align-items: center;
@@ -68,6 +68,7 @@ li{
   cursor: pointer;
   margin-right: 20px;
   font-size: 1.5em;
+  line-height: 60px;
 }
 li:last-child{
   margin-right: 0;

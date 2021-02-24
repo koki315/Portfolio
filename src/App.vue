@@ -14,7 +14,7 @@
 
 <script>
 import Header from "@/components/Header";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 export default {
   name: "App",
 
@@ -33,21 +33,44 @@ export default {
 
 * {
   font-family: "Source Sans Pro", sans-serif;
-  color: #7510f7;
+  color: #141C3A;
 }
-
+.v-application {
+  background: #7510f7 !important;
+  overflow: hidden;
+}
 .inner {
-  padding: 1.25em 6.25em 0px;
+  padding: 0.625em 6.25em 0px;
 }
+// slide animation===================================================================================================================================================
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 1s ease;
 }
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(-10px);
   opacity: 0;
+}
+// header===================================================================================================================================================
+.header-container {
+  padding-bottom: 2em !important;
+}
+// fontsize color===================================================================================================================================================
+h1 {
+  color: #fff;
+  text-align: center;
+}
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+li {
+  color: #fff;
+}
+span{
+  font-weight: bold;
+}
+h5{
+  font-size: 18px;
 }
 </style>
