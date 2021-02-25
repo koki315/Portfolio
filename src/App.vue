@@ -4,11 +4,12 @@
       <Header></Header>
       <v-main>
         <transition name="slide-fade">
-          <router-view></router-view>
+          <router-view @open="modalActive" @close="modalClose"></router-view>
         </transition>
       </v-main>
     </div>
     <Footer />
+    <div class="overlay" v-bind:class="{active:isActive}"></div>
   </v-app>
 </template>
 
@@ -23,9 +24,19 @@ export default {
     Footer,
   },
 
-  data: () => ({
-    //
-  }),
+  data (){
+    return {
+      isActive:false,
+    }
+  },
+  methods:{
+    modalActive(){
+      this.isActive = true
+    },
+    modalClose(){
+      this.isActive = false
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -72,5 +83,19 @@ span{
 }
 h5{
   font-size: 18px;
+}
+// modal===================================================================================================================================================
+.overlay{
+  display: none;
+  transition: 0.5s;
+}
+.active{
+  display: block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <img src="@/assets/logo_200x200.png" alt="" />
+    <!-- <img src="@/assets/logo_200x200.png" alt="" /> -->
 
     <ul>
       <router-link
