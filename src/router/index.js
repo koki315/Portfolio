@@ -5,7 +5,7 @@ import Profile from '@/views/Profile'
 import Portfolio from '@/views/Portfolio'
 import Contact from '@/views/Contact'
 import Skills from '@/views/Skills'
-import History from '@/views/History'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -34,11 +34,7 @@ const routes = [
   component:Skills,
   name:'Skills'
  },
- {
-  path:'/History',
-  component:History,
-  name:'History'
- },
+ 
  {
    path:'*',
    redirect:'/'

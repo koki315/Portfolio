@@ -9,7 +9,7 @@
       </v-main>
     </div>
     <Footer />
-    <div class="overlay" v-bind:class="{active:isActive}"></div>
+    <div class="overlay" v-bind:class="{ active: isActive }"></div>
   </v-app>
 </template>
 
@@ -24,34 +24,45 @@ export default {
     Footer,
   },
 
-  data (){
+  data() {
     return {
-      isActive:false,
-    }
+      isActive: false,
+    };
   },
-  methods:{
-    modalActive(){
-      this.isActive = true
+  methods: {
+    modalActive() {
+      this.isActive = true;
     },
-    modalClose(){
-      this.isActive = false
-    }
-  }
+    modalClose() {
+      this.isActive = false;
+    },
+  },
 };
 </script>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import "@/scss/_variable.scss";
+// breakpoints==========================================================================================
 
+// common====================================================================================================================================
 * {
   font-family: "Source Sans Pro", sans-serif;
-  color: #141C3A;
+  color: #141c3a;
 }
 .v-application {
   background: #7510f7 !important;
   overflow: hidden;
+  @include mq(sm) {
+    overflow: scroll;
+  }
+}
+.theme-light {
+  background: #7510f7 !important;
 }
 .inner {
   padding: 0.625em 6.25em 0px;
+  @include mq(sm) {
+    padding: 0;
+  }
 }
 // slide animation===================================================================================================================================================
 .slide-fade-enter-active {
@@ -74,28 +85,40 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: normal;
+  @include mq(sm) {
+    font-size: 1em;
+  }
 }
 li {
   color: #fff;
 }
-span{
+span {
   font-weight: bold;
 }
-h5{
+h5 {
   font-size: 18px;
 }
 // modal===================================================================================================================================================
-.overlay{
+.overlay {
   display: none;
   transition: 0.5s;
 }
-.active{
+.active {
   display: block;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.v-main {
+  height: 100vh;
+}
+.container {
+  height: 100%;
+}
+.inner{
+  height: 100vh;
 }
 </style>

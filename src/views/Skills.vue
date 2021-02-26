@@ -74,14 +74,14 @@ export default {
       this.showDetail = true;
       const detail = SkillModel.returnDetail(id);
       this.title = detail.title;
-      this.description = detail.description
+      this.description = detail.description;
     },
     showSkillOfOthers(e) {
       const id = e.currentTarget.getAttribute("id");
       this.showDetail = true;
       const detail = SkillModel.returnDetailOfOthers(id);
       this.title = detail.title;
-      this.description = detail.description
+      this.description = detail.description;
     },
     closeDetail() {
       this.showDetail = false;
@@ -95,11 +95,17 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
+@import "@/scss/_variable.scss";
 .card-container {
   width: 70%;
   margin-top: 2em;
   margin: 2em auto 0;
+  max-height: 100%;
+  @include mq(sm) {
+    width: auto;
+    margin-top: 0.5em;
+  }
 }
 
 h2 {
@@ -107,6 +113,9 @@ h2 {
   text-align: center;
   border-bottom: 3px solid #141c3a;
   margin-bottom: 1em;
+  @include mq(sm) {
+    font-size: 20px;
+  }
 }
 .sub-container {
   display: flex;
@@ -114,6 +123,9 @@ h2 {
 }
 .row {
   margin-top: 0;
+  @include mq (sm){
+    padding-bottom: 50px;
+  }
 }
 h5 {
   cursor: pointer;
@@ -145,5 +157,9 @@ h5:hover {
   margin: 0 auto;
   margin-top: 4em;
   border-radius: 5px !important;
+  @include mq (sm){
+    width: 80%;
+    height: 30%;
+  }
 }
 </style>

@@ -10,8 +10,8 @@
 export default {};
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import "@/scss/_variable.scss";
 .text-center,
 strong {
   color: #fff;
@@ -26,5 +26,9 @@ footer {
   padding: 0.9375em 0;
   align-items: center;
   font-size: 1.5em;
+  @include mq (sm){
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 </style>

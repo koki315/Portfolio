@@ -4,7 +4,7 @@
 
     <v-card elevation="12" tile class="card-container">
       <v-row>
-        <v-col lg="6">
+        <v-col lg="6" md="12">
           <div class="sub-container">
             <img
               src="../assets/portfolio.png"
@@ -15,7 +15,7 @@
             />
           </div>
         </v-col>
-        <v-col lg="6">
+        <v-col lg="6" md="12">
           <div class="sub-container">
             <img
               src="../assets/portfolio.png"
@@ -72,16 +72,24 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/scss/_variable.scss";
 img {
   max-width: 100%;
   cursor: pointer;
 }
 .row {
   margin-top: 0;
+  @include mq (sm){
+    display: block;
+  }
 }
 .card-container {
   margin-top: 2em;
+  @include mq (sm){
+    margin-top: 0.5em;
+    max-height: 100%;
+  }
 }
 .sub-container {
   overflow: hidden;
@@ -89,6 +97,11 @@ img {
 img:hover {
   transform: scale(1.5, 1.5);
   transition: 1s all;
+}
+.cotaniner {
+  @include mq(sm) {
+    padding-top: 0;
+  }
 }
 /* modal============================================================================================================================== */
 .modal {
@@ -112,5 +125,9 @@ img:hover {
   margin: 0 auto;
   margin-top: 4em;
   border-radius: 5px !important;
+  @include mq (sm){
+    width: 80%;
+    height: 40%;
+  }
 }
 </style>

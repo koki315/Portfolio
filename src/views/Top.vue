@@ -22,9 +22,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/scss/_variable.scss";
 .top {
   text-align: center;
   padding-top: 8em;
+  @include mq(sm) {
+    padding-top: 100px;
+  }
 }
 
 @keyframes text-in {
@@ -40,5 +44,8 @@ export default {
   display: inline-block;
   min-width: 0.3em;
   animation: text-in 0.8s backwards;
+  @include mq(sm) {
+    font-size: 2em;
+  }
 }
 </style>

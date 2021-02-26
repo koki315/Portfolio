@@ -36,10 +36,7 @@ export default {
           title: "Portfolio",
           to: { name: "Portfolio" },
         },
-        {
-          title: "History",
-          to: { name: "History" },
-        },
+
         {
           title: "Contact",
           to: { name: "Contact" },
@@ -51,29 +48,51 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/scss/_variable.scss";
 img {
   width: 3.75em;
 }
-.header-container{
+.header-container {
   display: flex;
   padding-bottom: 5em;
   align-items: center;
+  @include mq(sm) {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+  }
 }
-ul{
+ul {
   list-style: none;
-  margin-left: auto;
   display: flex;
+  @include mq(md) {
+    margin-left: auto;
+  }
+  @include mq(sm) {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
-li{
+.v-application {
+  ul {
+    @include mq(sm) {
+      padding-left: 0;
+    }
+  }
+}
+li {
   cursor: pointer;
   margin-right: 20px;
   font-size: 1.5em;
   line-height: 60px;
+  @include mq (sm){
+    font-size: 1.0em;
+  }
 }
-li:last-child{
+li:last-child {
   margin-right: 0;
 }
-li:hover{
+li:hover {
   opacity: 0.7;
 }
 </style>
