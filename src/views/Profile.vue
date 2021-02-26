@@ -27,7 +27,7 @@ export default {};
   align-items: center;
   @include mq(sm) {
     margin-top: 0.5em;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
   }
 }
 .image {

@@ -124,7 +124,7 @@ h2 {
 .row {
   margin-top: 0;
   @include mq (sm){
-    padding-bottom: 50px;
+    padding-bottom: 50px ;
   }
 }
 h5 {

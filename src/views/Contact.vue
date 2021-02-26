@@ -39,7 +39,7 @@ export default {
   padding: 4em;
   @include mq (sm){
     margin: 0.5em;
-    padding: 3em;
+    padding: 1em;
     display: flex;
   }
 }
@@ -48,5 +48,11 @@ a:nth-child(2){
   @include mq (sm){
     margin: 0 30px;
   }
+}
+a:nth-child(1){
+  margin-left: auto;
+}
+a:nth-child(3){
+  margin-right: auto;
 }
 </style>
